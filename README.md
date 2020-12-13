@@ -103,14 +103,19 @@ The dataframe reflecting school types also showed no changes in comparison to th
 **OBSERVATION:**<br>
 In the original analysis (in the module) - the following reflects the data for THS:
 ![](Resources/THS_replace_1.png)
-After scrubbing out the 9th graders (in the challenge) - the following reflects the data for THS:
+After scrubbing out the 9th graders & updating the denominator (in the challenge) - the following reflects the data for THS:
 ![](Resources/THS_replace_2.PNG)
 As you can see, the changes in Average Math Scores, Average Reading Scores, % of Passing Math,
 % of Passing Reading, % of Overall Passing (the last five values in respective order) 
 barely changed by a tenth. As such, no matter how you cut the data and average these values,
-the variance is minimal. In addition, the way the data is formatted in the final output, and only
+the variance is minimal. Similar to the district summary, when we're looking at scores by spending, size or type,
+we're not going to see much change since we're taking the averages of the entire district. 
+Omitting the score of 461 students out of 39,170 students (entire district) won't really move
+the needle as much as looking at the data when it's 461 students out of 1,635 students (THS only).
+In addition, the way the data is formatted in the final output, and only
 reflecting up to the tenth digit, it's difficult to see that variance change. Resultantly, 
 the data is assumed to have no change.
+
 
 ## Summary
 ---
@@ -125,9 +130,6 @@ postion in school performing ranks. Jumping from the 8th spot to the 2nd spot is
 * Moreover, the result of the percentage changes traces back to removing the 9th graders out of the denominator.
 As a front-end customer looking at the analysis, it's hard to see that change because it's not really highlighted.
 However, it is an important change from the back-end perspective. In Step 5 of the challenge, it was requested to
-only retrieve the number of 10th-12th graders to use as a new student count within the data. At this point, the student count at Thomas High School went from 1,635 to only 1,174 students. Resultanltly, the 1,174 students were
-used to calculate the new passing percentages.
+only retrieve the number of 10th-12th graders to use as a new student count within the data. At this point, the student count at Thomas High School went from 1,635 to only 1,174 students. Resultanltly, the 1,174 students were used to calculate the new passing percentages.
 
-Rightfully, the school board was concerned about the integrity of the data with the new information of academic dishonesty. After modifying and iterating through the data, it's safe to say, the overall impact was very minimal.
-With or without Thomas High School's ninth grade scores, the district numbers did not deviate much from the original. However, it is clear that Thomas High School did benefit from the changes. Moreover, with the updated
-data, I'm confident the school board can move forward knowing the data is accurate and consistent.
+Rightfully, the school board was concerned about the integrity of the data with the new information of academic dishonesty. After modifying and iterating through the data, it's safe to say, the overall impact was very minimal. The district numbers did not deviate much from the original. However, it is clear that Thomas High School did benefit from the changes. Moreover, with the updated data, I'm confident the school board can move forward knowing the data is accurate and consistent.
